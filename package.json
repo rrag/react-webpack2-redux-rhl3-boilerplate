@@ -1,0 +1,67 @@
+{
+  "name": "react-webpack2-redux-rhl3-boilerplate",
+  "version": "0.0.0",
+  "private": true,
+  "description": "react-webpack2-redux-rhl3-boilerplate",
+  "scripts": {
+    "watch": "cross-env BABEL_ENV=es node scripts/watch.js",
+    "serve": "node scripts/serve.js",
+    "clean": "rimraf build && rimraf coverage && rimraf npm-debug.log",
+    "build": "npm run clean && npm run build:dev && npm run build:prod",
+    "build:prod": "cross-env BABEL_ENV=production webpack --config config/webpack.base.config.js --env prod",
+    "build:dev": "cross-env BABEL_ENV=es webpack --config config/webpack.base.config.js --env dev",
+    "lint": "eslint --ext .js,.jsx src",
+    "test": "jest --coverage",
+    "validate": "npm run lint && npm run test",
+    "watch:test": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rrag/react-webpack2-redux-rhl3-boilerplate"
+  },
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/rrag/react-webpack2-redux-rhl3-boilerplate/issues"
+  },
+  "homepage": "https://github.com/rrag/react-webpack2-redux-rhl3-boilerplate",
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-redux": "^5.0.0-beta.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.10.2",
+    "eslint-plugin-const-immutable": "^1.0.1",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-react": "^6.7.1",
+    "express": "^4.14.0",
+    "html-webpack-plugin": "^2.24.1",
+    "jest": "^17.0.3",
+    "progress-bar-webpack-plugin": "^1.9.0",
+    "react-addons-test-utils": "^15.4.0",
+    "react-test-renderer": "^15.4.0",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.1.1",
+    "rimraf": "^2.5.4",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-config-utils": "^2.1.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  }
+}
